@@ -22,15 +22,15 @@ module Controller {
         public remove = (id) =>{
             this.UserService.remove(id);
         }
-        public save = (): void => {
+        public save = () => {
             this.UserService.save(this.user);
             this.user = new User(0,"","",0);
         }
-        public preEdit = (id:number): void =>{
+        public preEdit = (id) =>{
             this.isEdit = true;
             this.user = this.UserService.preEdit(id);
         }
-        public edit = (): void =>{
+        public edit = () =>{
             this.UserService.edit(this.user);
             this.user = new User(0,'','',0);
             this.isEdit = false;
