@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="app">
+<head >
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+   
+</head>
+<body>
+    <a ui-sref="test">test</a>
+    <a ui-sref="crud">crud</a>
+    <div ui-view></div>
+
+    
+    <!--<my-directive name="Dire bonjour"></my-directive>
+    <my-component name="Dire bonjour"></my-component>-->
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+
+
+    <script src="App/app.js"></script>
+    <script src="App/Model/User.js"></script>
+    <script src="App/Service/UserService.js"></script>
+    <script src="App/Controller/UserController.js"></script>
+    <!--<script src="App/Controller/UserController.js"></script>-->
+
+    <script src="App/myDirective.js"></script>
+    <script src="App/myComponent.js"></script>
+</body>
+</html>

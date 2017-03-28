@@ -1,0 +1,46 @@
+<div class="container">   
+        <h1>TypeScript and AngularJS</h1>
+        <hr>
+        <table class="table table-striped">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Firstname</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="u in vm.users">
+                <td>{{$index + 1}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.firstname}}</td>
+                <td>{{u.age}}</td>
+                <td>
+                    
+                    <button type="button" class="btn btn-danger btn-xs" ng-click="vm.remove(u.id)">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" ng-click="vm.preEdit(u.id)">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+            <tfoot> 
+                <tr>
+                    <form>
+                        <td><input type="text" class="form-control" ng-model="vm.user.id"/></td>
+                        <td><input type="text" class="form-control" ng-model="vm.user.name"/></td>
+                        <td><input type="text" class="form-control" ng-model="vm.user.firstname"/></td>
+                        <td><input type="text" class="form-control" ng-model="vm.user.age"/></td>
+                        <td>
+                            <button type="submit" class="btn btn-success btn-xs" ng-if="!vm.isEdit" ng-click="vm.save()">
+                                <i class="glyphicon glyphicon-ok"></i>   
+                            </button>
+                            <button type="submit" class="btn btn-success btn-xs" ng-if="vm.isEdit" ng-click="vm.edit()">
+                                <i class="glyphicon glyphicon-ok"></i>   
+                            </button>
+                        </td>
+                    </form>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
